@@ -15,123 +15,112 @@ body {
   color: #3A4145;
 }
 
-.App {
+.markdown-content {
   font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB",
     "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
   color: #444443;
-}
-
-.mark-content {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 20px 40px 0;
   word-break: break-all;
 }
 
-.mark-content > h1 {
-  margin-top: 0;
-  margin-bottom: 0.67em;
-  font-size: 2em;
-}
-
-.mark-content {
-  font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB",
-    "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
-  color: #444443;
-}
-
-.mark-content ::-moz-selection {
+.markdown-content ::-moz-selection {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.mark-content ::selection {
+.markdown-content ::selection {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.mark-content h1,
-.mark-content h2,
-.mark-content h3,
-.mark-content h4,
-.mark-content h5,
-.mark-content h6 {
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB",
     "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
   color: #222223;
   font-weight: bold;
 }
 
-.mark-content h1 {
-  font-size: 1.8em;
+.markdown-content h1 {
+  font-size: 1.6em;
   margin: 0.67em 0;
 }
 
-.mark-content > h1 {
+.markdown-content > h1 {
   margin-top: 0;
-  font-size: 1.8em;
 }
 
-.mark-content h2 {
+.markdown-content h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
-.mark-content h3 {
+.markdown-content h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-.mark-content h4,
-.mark-content h5,
-.mark-content h6 {
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
   font-size: 1em;
   margin: 1.6em 0 1em 0;
 }
 
-.mark-content h6 {
+.markdown-content h6 {
   font-weight: 500;
 }
 
-.mark-content p {
+.markdown-content p {
   margin-top: 0;
   margin-bottom: 1.46em;
 }
 
-.mark-content a {
+.markdown-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.markdown-content a {
   color: #111;
   word-wrap: break-word;
   text-decoration-color: rgba(0, 0, 0, 0.4);
 }
 
-.mark-content a:hover {
+.markdown-content a:hover {
   color: #555;
+  text-decoration: underline;
   text-decoration-color: rgba(0, 0, 0, 0.6);
 }
 
-.mark-content strong,
-.mark-content b {
+.markdown-content strong,
+.markdown-content b {
   font-weight: 700;
   color: #222223;
 }
 
-.mark-content em,
-.mark-content i {
+.markdown-content em,
+.markdown-content i {
   font-style: italic;
   color: #222223;
 }
 
-.mark-content img {
+.markdown-content img {
   max-width: 100%;
   height: auto;
   margin: 0.2em 0;
 }
 
-.mark-content a img {
+.markdown-content a img {
   /* Remove border on IE */
   border: none;
 }
 
-.mark-content figure {
+.markdown-content figure {
   position: relative;
   clear: both;
   outline: 0;
@@ -140,7 +129,7 @@ body {
   min-height: 100px;
 }
 
-.mark-content figure img {
+.markdown-content figure img {
   display: block;
   max-width: 100%;
   margin: auto auto 4px;
@@ -149,7 +138,7 @@ body {
   box-sizing: border-box;
 }
 
-.mark-content figure figcaption {
+.markdown-content figure figcaption {
   position: relative;
   width: 100%;
   text-align: center;
@@ -160,76 +149,76 @@ body {
   color: #666665;
 }
 
-.mark-content figure figcaption a {
+.markdown-content figure figcaption a {
   text-decoration: none;
   color: #666665;
 }
 
-.mark-content hr {
+.markdown-content hr {
   display: block;
   width: 14%;
   margin: 40px auto 34px;
   border: 0 none;
-  border-top: 3px solid #dededc;
+  border-top: 2px solid #dededc;
 }
 
-.mark-content blockquote {
+.markdown-content blockquote {
   margin: 0 0 1.64em 0;
   border-left: 3px solid #dadada;
   padding-left: 12px;
   color: #666664;
 }
 
-.mark-content blockquote a {
+.markdown-content blockquote a {
   color: #666664;
 }
 
-.mark-content ul,
-.mark-content ol {
+.markdown-content ul,
+.markdown-content ol {
   margin: 0 0 24px 6px;
   padding-left: 16px;
 }
 
-.mark-content ul {
+.markdown-content ul {
   list-style-type: square;
 }
 
-.mark-content ol {
+.markdown-content ol {
   list-style-type: decimal;
 }
 
-.mark-content li {
+.markdown-content li {
   margin-bottom: 0.2em;
-  font-size: 16px;
+  font-size: 14px;
 }
 
-.mark-content li ul,
-.mark-content li ol {
+.markdown-content li ul,
+.markdown-content li ol {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 14px;
 }
 
-.mark-content li ul {
+.markdown-content li ul {
   list-style-type: disc;
 }
 
-.mark-content li ul ul {
+.markdown-content li ul ul {
   list-style-type: circle;
 }
 
-.mark-content li p {
+.markdown-content li p {
   margin: 0.4em 0 0.6em;
 }
 
-.mark-content .unstyled {
+.markdown-content .unstyled {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.mark-content code,
-.mark-content tt {
+.markdown-content code,
+.markdown-content tt {
   color: #808080;
   font-size: 0.96em;
   background-color: #f9f9f7;
@@ -239,7 +228,7 @@ body {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.mark-content pre {
+.markdown-content pre {
   margin: 1.64em 0;
   padding: 7px;
   border: none;
@@ -253,15 +242,15 @@ body {
   background-color: #f9f9f7;
 }
 
-.mark-content pre code,
-.mark-content pre tt {
+.markdown-content pre code,
+.markdown-content pre tt {
   color: #4c4c4c;
   border: none;
   background: none;
   padding: 0;
 }
 
-.mark-content table {
+.markdown-content table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
@@ -269,32 +258,32 @@ body {
   font-size: 0.96em;
 }
 
-.mark-content th,
-.mark-content td {
+.markdown-content th,
+.markdown-content td {
   text-align: left;
   padding: 4px 8px 4px 10px;
   border: 1px solid #dadada;
 }
 
-.mark-content td {
+.markdown-content td {
   vertical-align: top;
 }
 
-.mark-content tr:nth-child(even) {
+.markdown-content tr:nth-child(even) {
   background-color: #efefee;
 }
 
-.mark-content iframe {
+.markdown-content iframe {
   display: block;
   max-width: 100%;
   margin-bottom: 30px;
 }
 
-.mark-content figure iframe {
+.markdown-content figure iframe {
   margin: auto;
 }
 
-.mark-content table pre {
+.markdown-content table pre {
   margin: 0;
   padding: 0;
   border: none;
@@ -302,21 +291,21 @@ body {
 }
 
 @media (min-width: 1100px) {
-  .mark-content blockquote {
+  .markdown-content blockquote {
     margin-left: -24px;
     padding-left: 20px;
     border-width: 4px;
   }
 
-  .mark-content blockquote blockquote {
+  .markdown-content blockquote blockquote {
     margin-left: 0;
   }
 
-  .mark-content figure img {
+  .markdown-content figure img {
     margin: 0 0 4px;
   }
 
-  .mark-content figure figcaption:before {
+  .markdown-content figure figcaption:before {
     width: 25%;
     margin-left: 75%;
     border-top: 1px solid #dededc;
@@ -325,7 +314,7 @@ body {
     margin-bottom: 10px;
   }
 
-  .mark-content figure figcaption {
+  .markdown-content figure figcaption {
     position: absolute;
     left: -172px;
     width: 150px;
