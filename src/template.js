@@ -445,12 +445,13 @@ body {
 .markdown-content a {
   color: #111;
   word-wrap: break-word;
+  text-decoration-style: none;
   text-decoration-color: rgba(0, 0, 0, 0.4);
 }
 
 .markdown-content a:hover {
   color: #555;
-  text-decoration: underline;
+  text-decoration-style: underline;
   text-decoration-color: rgba(0, 0, 0, 0.6);
 }
 
