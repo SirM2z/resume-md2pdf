@@ -4,6 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const md = require('markdown-it');
+const wkhtmltopdf = require('wkhtmltopdf');
 const mdPluginSpan = require('./markdown-it-span');
 
 const appDirectory = fs.realpathSync(process.cwd());
@@ -33,21 +34,9 @@ function generateHtmlStr(markdownElm, title) {
   });
 }
 
-// 写入 index.html
-function writeIndexHtml(html) {
-  fs.open(path.resolve(appDirectory, 'index.html'), 'w', (e, fd) => {
-    if (e) throw e;
-    fs.write(fd, html, 'utf8', (e) => {
-      if (e) throw e;
-      fs.closeSync(fd);
-    });
-  });
-}
-
 (async function() {
-  const title = "毛润泽的简历";
+  const title = "前端简历";
   const markdownElm = await getMarkdownStr();
   const html = await generateHtmlStr(markdownElm, title);
-  await writeIndexHtml(html);
-  console.log('index.html 生成完毕');
+  wkhtmltopdf(html).pipe(fs.createWriteStream(path.resolve(appDirectory, 'index.pdf')));
 })();

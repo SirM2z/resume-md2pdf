@@ -6,11 +6,13 @@
   "author": "sirm2z <sirm2zisv@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node src/index.js",
     "html": "node src/generate-html.js",
     "pdf": "wkhtmltopdf ./index.html index.pdf",
     "build": "node src/generate-html.js && wkhtmltopdf ./index.html index.pdf"
   },
   "dependencies": {
-    "markdown-it": "^8.4.2"
+    "markdown-it": "^8.4.2",
+    "wkhtmltopdf": "^0.3.4"
   }
 }
