@@ -6,9 +6,11 @@
   "author": "sirm2z <sirm2zisv@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "node src/generate-html.js && wkhtmltopdf ./src/index.html index.pdf"
+    "html": "node src/generate-html.js",
+    "pdf": "wkhtmltopdf ./index.html index.pdf",
+    "build": "node src/generate-html.js && wkhtmltopdf ./index.html index.pdf"
   },
   "dependencies": {
-    "marked": "^0.6.2"
+    "markdown-it": "^8.4.2"
   }
 }
