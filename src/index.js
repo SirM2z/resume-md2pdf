@@ -1,6 +1,7 @@
 /**
  * convert md to html
  */
+require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const md = require('markdown-it');
@@ -34,9 +35,21 @@ function generateHtmlStr(markdownElm, title) {
   });
 }
 
+// 写入 index.html
+function writeHtml(html) {
+  fs.open(path.resolve(appDirectory, 'index.html'), 'w', (e, fd) => {
+    if (e) throw e;
+    fs.write(fd, html, 'utf8', (e) => {
+      if (e) throw e;
+      fs.closeSync(fd);
+    })
+  });
+}
+
 (async function() {
-  const title = "前端简历";
+  const title = process.env.TITLE;
   const markdownElm = await getMarkdownStr();
   const html = await generateHtmlStr(markdownElm, title);
+  writeHtml(html);
   wkhtmltopdf(html).pipe(fs.createWriteStream(path.resolve(appDirectory, 'index.pdf')));
 })();

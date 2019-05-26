@@ -9,6 +9,7 @@
     "start": "node src/index.js"
   },
   "dependencies": {
+    "dotenv": "^8.0.0",
     "markdown-it": "^8.4.2",
     "wkhtmltopdf": "^0.3.4"
   }
